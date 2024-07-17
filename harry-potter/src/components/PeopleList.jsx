@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useNavigate } from "react-router-dom"
+
 
 export default function PeopleList () {
 
     const [people, setPeople] = useState([])
+
+    let navigate = useNavigate()
+    const showPerson = (personID) => {
+      navigate(`${personID}`)
+    }
   
     useEffect(()=>{
       const getData = async () => {
@@ -29,6 +36,7 @@ export default function PeopleList () {
                     people.map((person, index) => (
                         <div key={index} 
                         className="objectItem"
+                        onClick={() => showPerson(person.id)}
                         style={{
                             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${person.attributes.image})`, 
                             backgroundSize:'600px', 

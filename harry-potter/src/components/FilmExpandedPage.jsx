@@ -31,14 +31,10 @@ export default function FilmExpandedPage (props) {
         <h3>Summary: {film.attributes.summary}</h3>
 
         </div>
-        <div className='expandedImage'
-        style={{
-          backgroundImage: `url(${film.attributes.poster})`, 
-          backgroundSize:'400px', 
-          backgroundPosition: 'center center'
-        }} 
-          >
-        </div>
+
+        <img src = {film.attributes.poster} 
+        className='expandedImage'
+        />
       </div>
     </div>
   ) 

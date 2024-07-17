@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useNavigate } from "react-router-dom"
 
 export default function SpellsList () {
 
     const [spells, setSpells] = useState([])
+
+    let navigate = useNavigate()
+    const showSpell = (spellID) => {
+      navigate(`${spellID}`)
+    }
   
     useEffect(()=>{
       const getData = async () => {
@@ -29,6 +35,7 @@ export default function SpellsList () {
                     spells.map((spell, index) => (
                         <div key={index} 
                         className="objectItem"
+                        onClick={() => showSpell(spell.id)}
                         style={{
                             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${spell.attributes.image})`, 
                             backgroundSize:'600px', 
@@ -36,9 +43,7 @@ export default function SpellsList () {
                         >
                             
                             <h2>{spell.attributes.name}</h2>
-                            <h3>Incantation: {spell.attributes.incancation}</h3>
-                            <h3>Motion: {spell.attributes.hand}</h3>
-                            <h3>Effect: {spell.attributes.effect}</h3>
+
                         </div>    
                     ))
                 }

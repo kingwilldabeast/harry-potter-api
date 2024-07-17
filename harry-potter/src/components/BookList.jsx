@@ -1,10 +1,17 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useNavigate } from "react-router-dom"
+
 
 export default function BookList () {
 
     const [books, setBooks] = useState([])
   
+    let navigate = useNavigate()
+    const showBook = (bookID) => {
+      navigate(`${bookID}`)
+    }
+
     useEffect(()=>{
       const getData = async () => {
         const responseBooks = await axios.get(`https://api.potterdb.com/v1/books`)
@@ -29,6 +36,7 @@ export default function BookList () {
                     books.map((book, index) => (
                         <div key={index} 
                         className="objectItem"
+                        onClick={() => showBook(book.id)}
                         style={{
                             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${book.attributes.cover})`, 
                             backgroundSize:'600px', 

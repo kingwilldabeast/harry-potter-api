@@ -4,7 +4,7 @@ export default function Home (props) {
     return (
       
       <div className="home">
-        <h2>in a galaxy far, far away...</h2>
+        <h2>Welcome to the Wizarding World</h2>
       </div>
     )
   }

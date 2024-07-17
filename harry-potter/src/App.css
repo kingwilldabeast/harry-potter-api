@@ -20,9 +20,27 @@
 }
 
 body {
-  /* background-image: URL(https://i.ytimg.com/vi/sV28-9N5Meg/maxresdefault.jpg); */
+  /* background-image: URL(https://i.ytimg.com/vi/sV28-9N5Meg/maxresdefault.jpg);
   background-size: 100%;
   background-color: rgb(57, 14, 68);
+
+  background-image: repeating-conic-gradient(from 30deg, #3e02c9 0% 60deg, #801111 0% 120deg);
+  background-size: 100px 50px;
+  background-color: #801111;
+
+  background: radial-gradient(circle, transparent 20%, #801010 20%, #801010 80%, transparent 80%, transparent) 0% 0% / 76px 76px, radial-gradient(circle, transparent 20%, #801010 20%, #801010 80%, transparent 80%, transparent) 38px 38px / 76px 76px, linear-gradient(#6c3ddb 2px, transparent 2px) 0px -1px / 38px 38px, linear-gradient(90deg, #6c3ddb 2px, #801010 2px) -1px 0px / 38px 38px #801010;
+  background-size: 76px 76px, 76px 76px, 38px 38px, 38px 38px;
+  background-color: #801010; */
+
+  /* background: repeating-conic-gradient(from 45deg, #5b1b12 0% 25%, #af730c 0% 50%);
+  background-size: 100px 50px;
+  background-color: #ecac04; */
+
+  background-image: radial-gradient(#f0a62b 2px, transparent 2px), radial-gradient(#f0a62b 2px, transparent 2px);
+  background-size: 38px 38px;
+  background-position: 0 0, 19px 19px;
+  background-color: #521263;
+  
   width: 100%;
   display: flex;
   flex-direction: column;
