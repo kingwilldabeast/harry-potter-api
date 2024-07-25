@@ -43,7 +43,7 @@ export default function FilmList () {
                         >
                             
                             <h2>{film.attributes.title}</h2>
-                            <h3>Summary: {film.attributes.summary}</h3>
+                            {/* <h3>Summary: {film.attributes.summary}</h3> */}
                         </div>    
                     ))
                 }

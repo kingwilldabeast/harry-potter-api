@@ -1,22 +1,11 @@
-
 @font-face {
-  font-family: Jedi;
-  src: url(assets/Starjedi.ttf);
+  font-family: Magic;
+  src: url(assets/Magic.ttf);
 }
 
 @font-face {
-  font-family: JediOutline;
-  src: url(assets/Starjout.ttf);
-}
-
-@font-face {
-  font-family: JediSymbol;
-  src: url(assets/Strjmono.ttf);
-}
-
-@font-face {
-  font-family: Abel;
-  src: url(assets/Abel-Regular.ttf);
+  font-family: Elegant;
+  src: url(assets/ElegantB.ttf);
 }
 
 body {
@@ -66,7 +55,8 @@ body {
 .header{
   text-align: center;
   color: yellow;
-  font-family: JediSymbol;
+  font-family: Magic;
+  font-size: 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -74,10 +64,23 @@ body {
   /* justify-content: space-around; */
 }
 
+.nav-container {
+  /* position: relative; */
+}
+
+.nav-toggle {
+  /* background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px; */
+  /* display: none; */
+}
+
 .nav {
   border-top: 1px solid yellow;
   border-bottom: 1px solid yellow;
-  font-family: Jedi;
   /* border-radius: 10px; */
   /* background-color: rgb(229, 192, 192); */
   /* padding: 10px; */
@@ -91,6 +94,8 @@ body {
 }
 
 .navtext {
+  font-family: Magic;
+  font-size: 40px;
   color: yellow;
   border: 1px solid transparent;
   padding: 10px;
@@ -108,12 +113,6 @@ body {
 .navtext.active {
   opacity: 0.2;
 }
-
-.bikini-link-symbol {
-  font-family: JediSymbol;
-  font-size: 25px;
-}
-
 
 .main {
   border-radius: 10px;
@@ -134,7 +133,7 @@ body {
   /* padding-top: 13%; */
   padding: 14% 0;
   color: yellow;
-  font-family: JediOutline;
+  font-family: Magic;
   text-align: center;
   font-size: 50px;
 }
@@ -163,7 +162,7 @@ body {
   margin: 10px;
   width: 400px;
   text-align: center;
-  font-family: Abel;
+  font-family: Elegant;
   /* transition: backgroundImage 0.3 ease; */
 }
 
@@ -176,12 +175,14 @@ body {
 }
 
 .expandedItem {
+  background-color: #2e0e36;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid yellow;
   border-radius: 10px;
-  margin-top: 10px;
+  margin: 10px 0;
+  height: 100%;
 }
 
 .expandedBody {
@@ -192,18 +193,31 @@ body {
 .expandedText {
   /* border: 1px solid yellow;
   border-radius: 10px; */
-  /* background-color: rgb(0,0,0,.5); */
   /* color: rgb(21, 122, 21); */
   color: yellow;
   padding: 10px;
   margin: 10px;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  /* height: 500px; */
   text-align: center;
-  font-family: Abel;
+  font-family: Elegant;
   display: flex;
   flex-direction: column;
 }
+
+.expandedImageContainer {
+  /* margin: 10px; */
+  /* width: 200px;  */
+  /* height: 200px;  */
+  /* overflow: hidden;   */
+  /* position: relative; */
+}
+
+/* .expandedImageContainer img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
+} */
 
 .expandedImage {
   /* border: 1px solid yellow;
@@ -214,9 +228,70 @@ body {
   /* padding: 10px; */
   margin: 10px;
   width: 400px;
+  /* aspect-ratio: auto 1/1; */
   /* height: 500px; */
 }
 
-.symbol {
-  font-family: Jedi;
+@media (max-width: 400px) {
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.header {
+  font-size: 10px;
+
+}
+
+/* .nav-toggle {
+  display: block;
+} */
+
+.nav {
+  overflow: scroll;
+  width: 100%;
+  /* display: none; */
+  /* flex-direction: column; */
+  gap: 5px;
+  padding: 0 5px;
+  margin: 1px 0;
+  /* flex-wrap: wrap; */
+}
+
+/* .nav.open {
+  display: flex;
+} */
+
+.navtext {
+  font-size: 20px;
+}
+
+.objectList {
+  overflow: scroll;
+  max-height: 450px;
+}
+
+.expandedItem {
+  overflow: scroll;
+  max-height: 450px;
+  width: 300px;
+}
+
+.expandedBody {
+  flex-direction: column;
+  align-items: center;
+}
+
+.expandedText {
+  width: 250px;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.expandedImage {
+  width: 200px;
+}
+
 }

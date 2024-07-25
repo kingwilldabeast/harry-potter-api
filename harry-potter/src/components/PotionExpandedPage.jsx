@@ -26,6 +26,10 @@ export default function PotionExpandedPage (props) {
       <Link to ='/potions' className='navtext'>Back to Potions</Link>
         <br/>
       <div className='expandedBody'>
+        <img src = {potion.attributes.image} 
+        className='expandedImage'
+        />        
+        
         <div className='expandedText'>
         <h2>{potion.attributes.name}</h2>
         <h3>Appearance: {potion.attributes.characteristics}</h3>
@@ -33,9 +37,7 @@ export default function PotionExpandedPage (props) {
         <h3>Ingredients: {potion.attributes.ingredients}</h3>
         </div>
 
-        <img src = {potion.attributes.image} 
-        className='expandedImage'
-        />
+
       </div>
     </div>
   ) 

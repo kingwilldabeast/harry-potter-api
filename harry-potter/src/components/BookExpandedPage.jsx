@@ -27,15 +27,15 @@ export default function BookExpandedPage (props) {
         <br/>
       <div className='expandedBody'>
         <div className='expandedText'>
-        <h2>{book.attributes.title}</h2>
-        <h3>Author: {book.attributes.author}</h3>
-        <h3>Summary: {book.attributes.summary}</h3>
+          <img src = {book.attributes.cover} 
+          className='expandedImage'
+          />
 
+          <h2>{book.attributes.title}</h2>
+          <h3>{book.attributes.author}</h3>
+          <h3>{book.attributes.summary}</h3>
         </div>
 
-        <img src = {book.attributes.cover} 
-        className='expandedImage'
-        />
       </div>
     </div>
   ) 

@@ -26,6 +26,10 @@ export default function SpellExpandedPage (props) {
       <Link to ='/spells' className='navtext'>Back to Spells</Link>
         <br/>
       <div className='expandedBody'>
+
+        <img src = {spell.attributes.image} 
+        className='expandedImage'
+        />        
         <div className='expandedText'>
         <h2>{spell.attributes.name}</h2>
         <h3>Incantation: {spell.attributes.incancation}</h3>
@@ -33,9 +37,6 @@ export default function SpellExpandedPage (props) {
         <h3>Effect: {spell.attributes.effect}</h3>
         </div>
 
-        <img src = {spell.attributes.image} 
-        className='expandedImage'
-        />
       </div>
     </div>
   ) 

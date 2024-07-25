@@ -8,10 +8,18 @@ export default function Nav (props) {
     const handleClick = (path) => {
         setActiveLink(path);
       };
+
+    // const [isOpen, setIsOpen] = useState(false);
+  
+    // const toggleMenu = () => {
+    //   setIsOpen(!isOpen);
+    // };
     
     return (
-      
-    <div className="nav">
+
+
+    <div className= "nav">
+
       <Link to="/" onClick={() => handleClick('/')}>
         <h2 className={activeLink === '/' ? 'navtext active' : 'navtext'}>Home</h2>
       </Link>
@@ -31,5 +39,6 @@ export default function Nav (props) {
         <h2 className={activeLink === '/potions' ? 'navtext active' : 'navtext'}>Potions</h2>
       </Link>
     </div>
+    
     )
   }

@@ -44,8 +44,8 @@ export default function BookList () {
                         >
                             
                             <h2>{book.attributes.title}</h2>
-                            <h3>Author: {book.attributes.author}</h3>
-                            <h3>Summary: {book.attributes.summary}</h3>
+                            {/* <h3>Author: {book.attributes.author}</h3> */}
+                            {/* <h3>Summary: {book.attributes.summary}</h3> */}
                         </div>    
                     ))
                 }

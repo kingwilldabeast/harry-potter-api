@@ -26,16 +26,19 @@ export default function PersonExpandedPage (props) {
       <Link to ='/people' className='navtext'>Back to people</Link>
         <br/>
       <div className='expandedBody'>
-        <div className='expandedText'>
-        <h2>{person.attributes.name}</h2>
-        <h3>{person.attributes.name}</h3>
-        <h3>Summary: {person.attributes.name}</h3>
-
-        </div>
 
         <img src = {person.attributes.image} 
         className='expandedImage'
-        />
+        />        
+        
+        <div className='expandedText'>
+        <h2>{person.attributes.name}</h2>
+        <h3>Gender: {person.attributes.gender}</h3>
+        <h3>Patronus: {person.attributes.patronus}</h3>
+        <h3>House: {person.attributes.house}</h3>
+        <h3>Boggart: {person.attributes.boggart}</h3>
+        </div>
+
       </div>
     </div>
   ) 

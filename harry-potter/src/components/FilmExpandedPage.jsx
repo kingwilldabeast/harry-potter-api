@@ -26,15 +26,17 @@ export default function FilmExpandedPage (props) {
       <Link to ='/films' className='navtext'>Back to Films</Link>
         <br/>
       <div className='expandedBody'>
+        {/* <div className='expandedImageContainer'> */}
+          <img className= 'expandedImage' src = {film.attributes.poster} />
+        {/* </div> */}
+        
         <div className='expandedText'>
         <h2>{film.attributes.title}</h2>
-        <h3>Summary: {film.attributes.summary}</h3>
+        <h3>{film.attributes.summary}</h3>
 
         </div>
 
-        <img src = {film.attributes.poster} 
-        className='expandedImage'
-        />
+
       </div>
     </div>
   ) 
