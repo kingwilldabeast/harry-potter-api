@@ -8,6 +8,11 @@
   src: url(assets/ElegantB.ttf);
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
   /* background-image: URL(https://i.ytimg.com/vi/sV28-9N5Meg/maxresdefault.jpg);
   background-size: 100%;
@@ -30,7 +35,7 @@ body {
   background-position: 0 0, 19px 19px;
   background-color: #521263;
   
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,9 +240,11 @@ body {
 @media (max-width: 400px) {
 
   html, body {
-    height: 100%;
+    /* height: 100%;
+    width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0; */
+    overflow: hidden;
   }
 
 .header {
